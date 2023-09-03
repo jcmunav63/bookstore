@@ -180,13 +180,14 @@ input {
   height: 20px;
   margin-top: 5px;
 }
+
 .inputclass {
   margin-left: 20px;
 }
 
 .addBookForm {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
 .bookbutton {
