@@ -3,7 +3,7 @@ import React from 'react';
 const Categories = () => (
   <div className="divcategories">
     <h3>List of book categories!</h3>
-    <ul>
+    <ul className="ulcategory">
       <li>Action</li>
       <li>Science Fiction</li>
       <li>Economy</li>
