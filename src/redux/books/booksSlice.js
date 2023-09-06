@@ -8,7 +8,6 @@ const booksSlice = createSlice({
       const newId = state.length === 0 ? 1 : state[state.length - 1].id + 1;
       const newBook = {
         id: newId,
-        // id: Date.now(),
         title: action.payload.title,
         author: action.payload.author,
       };

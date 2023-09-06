@@ -1,15 +1,20 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
-import Categorylist from './Categorylist';
+import { useDispatch, useSelector } from 'react-redux';
+import { checkInitialState } from '../redux/categories/categoriesSlice';
 
 const Categories = () => {
-  const categories = useSelector((state) => state.categories);
+  let categories = useSelector((state) => state.categories);
+  const dispatch = useDispatch();
+  const categoriesState = dispatch(checkInitialState());
+  if (categoriesState === 'Under construction!') {
+    categories = categoriesState;
+  }
   return (
     <div className="divcategories">
       <h3>Categories list...</h3>
-      <Categorylist
-        categories={categories}
-      />
+      <div className="categoryitem">
+        {categories}
+      </div>
     </div>
   );
 };
