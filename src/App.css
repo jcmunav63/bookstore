@@ -35,6 +35,7 @@ a {
   margin-left: 10px;
   text-decoration: none;
   color: grey;
+  width: 50px;
 }
 
 a:hover,
@@ -136,15 +137,50 @@ ul {
   margin-top: 8px;
 }
 
-.lightbutton {
+.lightbutton1 {
   background-color: transparent;
   border: none;
   color: grey;
   font-size: 1rem;
+  width: 90px;
 }
 
-.lightbutton:hover,
-.lightbutton:active {
+.lightbutton1:hover,
+.lightbutton1:active {
+  background-color: transparent;
+  border: none;
+  color: dimgray;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.lightbutton2 {
+  background-color: transparent;
+  border: none;
+  color: grey;
+  font-size: 1rem;
+  width: 70px;
+}
+
+.lightbutton2:hover,
+.lightbutton2:active {
+  background-color: transparent;
+  border: none;
+  color: dimgray;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.lightbutton3 {
+  background-color: transparent;
+  border: none;
+  color: grey;
+  font-size: 1rem;
+  width: 45px;
+}
+
+.lightbutton3:hover,
+.lightbutton3:active {
   background-color: transparent;
   border: none;
   color: dimgray;
@@ -156,11 +192,13 @@ ul {
   background-color: dodgerblue;
   color: white;
   border: transparent;
+  width: 135px;
+  padding: 8px 12px;
 }
 
 .buttonbook:hover,
 .buttonbook:active {
-  background-color: dodgerblue;
+  background-color: rgb(2, 108, 214);
   color: white;
   border: transparent;
   font-weight: bold;
@@ -202,4 +240,6 @@ input {
   width: 130px;
   height: 35px;
   font-weight: bold;
+  background-color: rgb(2, 108, 214);
+  border: none;
 }

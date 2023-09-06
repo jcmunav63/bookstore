@@ -1,15 +1,17 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import Categorylist from './Categorylist';
 
-const Categories = () => (
-  <div className="divcategories">
-    <h3>List of book categories!</h3>
-    <ul className="ulcategory">
-      <li>Action</li>
-      <li>Science Fiction</li>
-      <li>Economy</li>
-      <li>Travel</li>
-    </ul>
-  </div>
-);
+const Categories = () => {
+  const categories = useSelector((state) => state.categories);
+  return (
+    <div className="divcategories">
+      <h3>Categories list...</h3>
+      <Categorylist
+        categories={categories}
+      />
+    </div>
+  );
+};
 
 export default Categories;
