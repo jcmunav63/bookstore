@@ -1,9 +1,11 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
 import Bookdetails from './Bookdetails';
 import Bookform from './Bookform';
 
-function Booklist({ objectBooks }) {
+function Booklist() { // { objectBooks }
+  const objectBooks = useSelector((state) => state.books);
   return (
     <div className="booklist">
       <div>
@@ -26,15 +28,15 @@ function Booklist({ objectBooks }) {
   );
 }
 
-Booklist.propTypes = {
-  objectBooks: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-      category: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};
+// Booklist.propTypes = {
+// objectBooks: PropTypes.arrayOf(
+//   PropTypes.shape({
+//     id: PropTypes.number.isRequired,
+//     title: PropTypes.string.isRequired,
+//     author: PropTypes.string.isRequired,
+//     category: PropTypes.string.isRequired,
+//   }),
+// ).isRequired,
+// };
 
 export default Booklist;
