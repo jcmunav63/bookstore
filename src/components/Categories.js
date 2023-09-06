@@ -1,11 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { checkInitialState } from '../redux/categories/categoriesSlice';
+import { checkStatus } from '../redux/categories/categoriesSlice';
 
 const Categories = () => {
   let categories = useSelector((state) => state.categories);
   const dispatch = useDispatch();
-  const categoriesState = dispatch(checkInitialState());
+  const categoriesState = dispatch(checkStatus());
   if (categoriesState === 'Under construction!') {
     categories = categoriesState;
   }
