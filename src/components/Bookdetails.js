@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/booksSlice';
 import circle from '../assets/circle.png';
+import Button from './Button';
 
 const Bookdetails = ({ book }) => {
   const dispatch = useDispatch();
+  const handleRemoveBook = () => {
+    dispatch(removeBook(book.id));
+  };
   return (
     <>
       <div className="div1">
@@ -18,15 +22,7 @@ const Bookdetails = ({ book }) => {
         </div>
         <div>
           <button type="button" className="lightbutton1">Comments</button>
-          <button
-            type="button"
-            className="lightbutton2"
-            onClick={() => {
-              dispatch(removeBook(book.id));
-            }}
-          >
-            Remove
-          </button>
+          <Button className="lightbutton2" onClick={handleRemoveBook} label="Remove" />
           <button type="button" className="lightbutton3">Edit</button>
         </div>
       </div>
