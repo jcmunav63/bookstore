@@ -26,8 +26,7 @@
 <!-- PROJECT DESCRIPTION -->
 # 📖 [About the Project - Bookstore App] <a name="about-project"></a>
 
-**Bookstore** It's a simple website app to display a collection of books.
-
+**Bookstore** It's a simple website app to display a collection of books. It uses React & Redux.
 
 ## 🛠️ Built With <a name="built-with"></a>
 
@@ -37,7 +36,7 @@
 - CSS
 - JAVASCRIPT
 - WEBPACK
-- REACT
+- REACT - REDUX
 
 <!-- Key Features -->
 ### Key Features <a name="key-features"></a>
@@ -46,6 +45,7 @@
 - **A webpage with the use of linters**
 - **Dynamic interactivity with JavaScript**
 - **React project with components**
+- **Uses Redux**
 - **Fetch data from API**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -149,7 +149,7 @@ Soon to be deployed...
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
-The Math Magicians App will include the following features:
+The Bookstore App will include the following features:
 - **Some additional features.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

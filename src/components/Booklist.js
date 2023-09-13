@@ -1,17 +1,24 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Bookdetails from './Bookdetails';
 import Bookform from './Bookform';
+import { fetchBooks } from '../redux/books/booksSlice';
 
-function Booklist() { // { objectBooks }
+const Booklist = () => { // { objectBooks }
+  const dispatch = useDispatch();
   const objectBooks = useSelector((state) => state.books);
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
   return (
     <div className="booklist">
       <div>
         <ul>
-          {objectBooks.map((book) => (
+          {objectBooks.books.map((book) => (
             <li className="libook" key={book.id}>
-              <Bookdetails key={book.id} book={book} />
+              <Bookdetails key={book.item_id} book={book} />
             </li>
           ))}
         </ul>
@@ -24,6 +31,6 @@ function Booklist() { // { objectBooks }
       <div className="bottom" />
     </div>
   );
-}
+};
 
 export default Booklist;
