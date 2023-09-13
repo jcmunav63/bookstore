@@ -14,7 +14,7 @@ const Bookform = () => {
 
     if (title && author) {
       dispatch(addBook({
-        newId, title, author, category: 'General',
+        item_id: newId, title, author, category: 'General',
       }));
       setTitle('');
       setAuthor('');

@@ -16,9 +16,9 @@ const Booklist = () => { // { objectBooks }
     <div className="booklist">
       <div>
         <ul>
-          {objectBooks.map((book) => (
+          {objectBooks.books.map((book) => (
             <li className="libook" key={book.id}>
-              <Bookdetails key={book.id} book={book} />
+              <Bookdetails key={book.item_id} book={book} />
             </li>
           ))}
         </ul>

@@ -13,12 +13,14 @@ const initialState = {
 export const fetchBooks = createAsyncThunk('books/fetchBooks', async (thunkAPI) => {
   try {
     const response = await axios.get(`${baseUrl}/${appId}/books`);
-    const booksData = await response.data;
-    const getKeys = Object.keys(booksData);
+    // console.log(response);
+    const objectBooks = await response.data;
+    const getKeys = Object.keys(objectBooks);
     let books = [];
     getKeys.forEach((key) => {
-      books = [...books, { ...booksData[key][0], item_id: key }];
+      books = [...books, { ...objectBooks[key][0], item_id: key }];
     });
+    // console.log(books);
     return books;
   } catch (error) {
     return thunkAPI.rejectWithValue(
