@@ -8,9 +8,6 @@ function Booklist() { // { objectBooks }
   return (
     <div className="booklist">
       <div>
-        <div className="bookslisth3">
-          <h3>Books list...</h3>
-        </div>
         <ul>
           {objectBooks.map((book) => (
             <li className="libook" key={book.id}>
